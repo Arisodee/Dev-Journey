@@ -1,9 +1,9 @@
 {% extends 'dev/base.html'%}
 {% load bootstrap3 %}
 {% block content %}
-<div class="container text-center">
+<div class="container register text-center">
     <div class="col-md-3"></div>
-    <div class="col-md-6">
+    <div class="col-md-6 reg-form">
         {% if form.errors %}
         <p>Please ensure your details are correct</p>
         {% endif %}
@@ -16,13 +16,13 @@
                     {% csrf_token %}
                     {% bootstrap_form form %}
                     <div class="form-group">
-                        <input type="submit" class="btn btn-info btn-sm" value="Sign Up">
+                        <input type="submit" class="btn btn-primary btn-sm" value="Sign Up">
 
                     </div>
                     <input type="hidden" name="next" value=" {{next}} ">
                 </form>
                 <p>Already have an account?
-                    <a class="btn btn-info" href="/accounts/login/"> Log In </a> here
+                    <a class="btn btn-primary" href="/accounts/login/"> Log In </a> here
                 </p>
             </div>
         </div>

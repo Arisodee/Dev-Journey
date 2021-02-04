@@ -38,6 +38,9 @@
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
                 <li>
+                    <a href="{% url 'about' %}">About</a>
+                </li>
+                <li>
                     <a href="{% url 'post_new' %}">New Post</a>
                 </li>
                 <li>
@@ -58,7 +61,7 @@
 
         </div>
     </nav>
-
+    
     <!-- content Block -->
 
     <div class="container content">
