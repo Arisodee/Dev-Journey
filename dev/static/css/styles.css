@@ -7,3 +7,34 @@
 .bigbrand{
     font-size: 1.5em;
 }
+
+.centerlist{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.postdate{
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.posttitle{
+    font-family:'Handlee', cursive;
+    font-size: 3em;
+}
+
+.postcontent{
+    font-family: cursive;
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+.btn-comment{
+    position:absolute;
+    right:0px;
+}
+
+.comments{
+    text-decoration: underline;
+    font-family: 'Handlee', cursive;
+}
