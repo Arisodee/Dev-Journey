@@ -3,18 +3,19 @@
 {% block content %}
 <div class="jumbotron">
     <h2>Please Login</h2>
-    <h4>Must be a superuser,please check with site admin</h4>
 
-    (% if form.errors %)
+    {% if form.errors %}
         <p>Username or pssword is incorrect! Try again.</p>
-    (% endif %)
+    {% endif %}
 
     <form action="{% url 'login' %}" method="POST">
         {% csrf_token %}
-            {% form.as_p %}
+            {{ form.as_p }}
             <input type="submit" class="btn btn-primary" value="login">
             <input type="hidden" name="next" value="{{next}}">
     </form> 
+    <p>Don't have an account yet?
+    <a class="btn btn-info" href="/accounts/register/"> Sign Up</a></p>
 </div>
 
 {% endblock %}
